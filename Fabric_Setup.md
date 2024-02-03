@@ -35,21 +35,16 @@ You can do this as follows:
 6\. Download **both** the public and private keys. The private key will
 be named \"bastion_key\", and the corresponding public key will be named
 \"bastion_key.pub\". Be sure to save these somewhere on your computer
-that you will be able to find them again (the .ssh directory is the
-conventional choice, but any location is ok).
+that you will be able to find them again.
 
-7\. Set the file permissions so that the private key is only readable by
-your user. You can do this with the command:
-`chmod 0600 ~/.ssh/bastion_key` if you saved the key in the .ssh directory and named it \"bastion_key\".
-If you chose another location, adjust the path accordingly (e.g. if you
-saved it in a telcom2310 directory on your Desktop:
-`chmod 0600 ~/Desktop/telcom2310/bastion_key`)
+7\. (**If you are using a Windows machine, you can skip this step, it will be covered in step 4-6 of next Section**)
 
-8\. Repeat the above steps to generate the sliver key. Select the
-\"Sliver\" tab instead of \"Bastion\" and name the key
-\"fabric_sliver_key\".
+Set the file permissions so that the private key is only readable by your user. You can do this with the command: `chmod 0600 <path-to-bastion-key>/bastion_key`. 
+For example if you saved it in a telcom2310 directory on your Desktop then the command will look like: `chmod 0600 ~/Desktop/telcom2310/bastion_key`
 
-## Configure Your JupyterHub Environment
+8\. Repeat the above steps to generate the sliver key. Select the \"Sliver\" tab instead of \"Bastion\" and name the key \"fabric_sliver_key\".
+
+## Configure Your JupyterHub Environment (configure.ipynb)
 
 We will use Fabric\'s JupyterHub environment to reserve virtual
 machines. To get to JupyterHub from the Fabric portal, you can click the
@@ -68,10 +63,29 @@ folder.
 3\. Click the \"Configure Environment\" link in the notebook (under
 \"Setup Environment\")
 
-4\. Follow the instructions in the notebook, editing the specified
-variables and running each cell to set up your environment.
-- Note 1: I recommend using the \~/work/fabric_config directory to store all your keys and your ssh config file.
-- Note 2: The final cell "﻿﻿Create a Downloadable Package that Deploys SSH Tunnels" is not needed. You can skip that cell. If you do run it, you will likely get an error `cp: cannot stat ‘fabric_ssh_tunnel_tools.zip’: No such file or directory`. You may safely ignore this error; your environment is already set up.
+4\. Create a directory called `fabric_config` using the command `mkdir ~/work/fabric_config` and upload the public and private bastion and fabric_sliver keys you just downloaded to the fabric_config folder. You can drag-and-drop or use the upload button on left side.
+
+5\. Change the permissions of the key files in this terminal if not done on your computer before. Open a new Terminal using File > New > Terminal, navigate to fabric_config folder `cd ~/work/fabric_config`, and change the permission of private keys here - `chmod 0600 ~/work/fabric_config/bastion_key` and `chmod 0600 ~/work/fabric_config/fabric_sliver_key`
+
+6\. Follow the instructions in the notebook, editing the specified variables and running each cell to set up your environment. Important variables to edit are - 
+
+FABRIC_BASTION_USERNAME (use screenshot below to find)
+FABRIC_PROJECT_ID (use screenshot below to find)
+FABRIC_BASTION_PRIVATE_KEY_LOCATION=${HOME}/work/fabric_config/bastion_key
+FABRIC_BASTION_SSH_CONFIG_FILE=${HOME}'/work/fabric_config/ssh_config'
+FABRIC_RC_FILE=${HOME}'/work/fabric_config/fabric_rc'
+FABRIC_SLICE_PRIVATE_KEY_FILE=${HOME}/work/fabric_config/slice_key
+FABRIC_SLICE_PUBLIC_KEY_FILE=${FABRIC_SLICE_PRIVATE_KEY_FILE}.pub
+
+### To find Username (FABRIC_BASTION_USERNAME)
+![user-login](https://github.com/Akshay94/telcom2310-star/assets/8385908/ca982216-3c6f-4e69-a2e1-d7f944192041)
+
+### To find Project ID (FABRIC_PROJECT_ID)
+![project-id-1](https://github.com/Akshay94/telcom2310-star/assets/8385908/130fc6a3-2f84-4a0a-9051-9c9bc5f1253b)
+![project-id-2](https://github.com/Akshay94/telcom2310-star/assets/8385908/ded67914-eaf2-4d6c-bd67-bf010456d770)
+
+
+**Note:** The final cell "﻿﻿Create a Downloadable Package that Deploys SSH Tunnels" is not needed. You can skip that cell. If you do run it, you will likely get an error `cp: cannot stat ‘fabric_ssh_tunnel_tools.zip’: No such file or directory`. You may safely ignore this error; your environment is already set up.
 
 ## (Optional) Finish Configuring Your Local SSH Environment
 
