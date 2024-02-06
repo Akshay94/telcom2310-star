@@ -63,14 +63,16 @@ folder.
 3\. Click the \"Configure Environment\" link in the notebook (under
 \"Setup Environment\")
 
-4\. Open a new Terminal using File > New > Terminal. Create a directory called `fabric_config` using the command `mkdir ~/work/fabric_config` and upload the public and private bastion and fabric_sliver keys you just downloaded to the fabric_config folder. You can drag-and-drop or use the upload button on left side.
+4\. Open a new Terminal using File > New > Terminal. Create a directory called `fabric_config` using the command `mkdir ~/work/fabric_config`. Do not panic if it gives you the error "Cannot create directory: File exists", just proceed forward. 
 
-5\. Change the permissions of the key files in this terminal if not done on your local computer before. Open a new Terminal using File > New > Terminal, navigate to fabric_config folder `cd ~/work/fabric_config`, and change the permission of private keys here - `chmod 0600 ~/work/fabric_config/bastion_key` and `chmod 0600 ~/work/fabric_config/fabric_sliver_key`
+5\. Upload the public and private bastion and fabric_sliver keys you just downloaded to the fabric_config folder. You can drag and drop or use the upload button on the left side.
 
-6\. Follow the instructions in the notebook, editing the specified variables and running each cell to set up your environment. Important variables to edit are - 
+6\. Change the permissions of the key files in this terminal if not done on your local computer before. Go to the already open terminal (from Step 4), navigate to fabric_config folder `cd ~/work/fabric_config`, and change the permission of private keys here - `chmod 0600 ~/work/fabric_config/bastion_key` and `chmod 0600 ~/work/fabric_config/fabric_sliver_key`
 
-FABRIC_BASTION_USERNAME (use screenshot below to find)
-FABRIC_PROJECT_ID (use screenshot below to find)
+7\. Follow the instructions in the notebook, edit the specified variables and run each cell to set up your environment. Important variables to edit are - 
+
+FABRIC_BASTION_USERNAME (use the screenshot below to find)
+FABRIC_PROJECT_ID (use the screenshot below to find)
 FABRIC_BASTION_PRIVATE_KEY_LOCATION=${HOME}/work/fabric_config/bastion_key
 FABRIC_BASTION_SSH_CONFIG_FILE=${HOME}'/work/fabric_config/ssh_config'
 FABRIC_RC_FILE=${HOME}'/work/fabric_config/fabric_rc'
