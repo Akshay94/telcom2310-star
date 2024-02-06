@@ -65,7 +65,7 @@ folder.
 
 4\. Open a new Terminal using File > New > Terminal. Create a directory called `fabric_config` using the command `mkdir ~/work/fabric_config`. Do not panic if it gives you the error "Cannot create directory: File exists", just proceed forward. 
 
-5\. Upload the public and private bastion and fabric_sliver keys you just downloaded to the fabric_config folder. You can drag and drop or use the upload button on the left side.
+5\. Upload the downloaded public and private bastion and fabric_sliver keys to this `fabric_config` folder. You can drag and drop or use the upload button on the left side.
 
 6\. Change the permissions of the key files in this terminal if not done on your local computer before. Go to the already open terminal (from Step 4), navigate to fabric_config folder `cd ~/work/fabric_config`, and change the permission of private keys here - `chmod 0600 ~/work/fabric_config/bastion_key` and `chmod 0600 ~/work/fabric_config/fabric_sliver_key`
 
