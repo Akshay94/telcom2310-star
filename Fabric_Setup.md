@@ -77,12 +77,17 @@ FABRIC_RC_FILE=${HOME}'/work/fabric_config/fabric_rc'
 FABRIC_SLICE_PRIVATE_KEY_FILE=${HOME}/work/fabric_config/slice_key
 FABRIC_SLICE_PUBLIC_KEY_FILE=${FABRIC_SLICE_PRIVATE_KEY_FILE}.pub
 
-### To find Username (FABRIC_BASTION_USERNAME)
-![user-login](https://github.com/Akshay94/telcom2310-star/assets/8385908/ca982216-3c6f-4e69-a2e1-d7f944192041)
+### To find Your Username (FABRIC_BASTION_USERNAME) (Do not use the one in the image)
+<img src="https://github.com/Akshay94/telcom2310-star/assets/8385908/ca982216-3c6f-4e69-a2e1-d7f944192041" alt="drawing" width="600"/>
+<!-- ![user-login](https://github.com/Akshay94/telcom2310-star/assets/8385908/ca982216-3c6f-4e69-a2e1-d7f944192041)-->
 
-### To find Project ID (FABRIC_PROJECT_ID)
-![project-id-1](https://github.com/Akshay94/telcom2310-star/assets/8385908/130fc6a3-2f84-4a0a-9051-9c9bc5f1253b)
-![project-id-2](https://github.com/Akshay94/telcom2310-star/assets/8385908/ded67914-eaf2-4d6c-bd67-bf010456d770)
+### To find Project ID (FABRIC_PROJECT_ID) (Do not use the one in the image)
+<img src="https://github.com/Akshay94/telcom2310-star/assets/8385908/130fc6a3-2f84-4a0a-9051-9c9bc5f1253b" alt="drawing" width="600"/>
+<img src="https://github.com/Akshay94/telcom2310-star/assets/8385908/ded67914-eaf2-4d6c-bd67-bf010456d770" alt="drawing" width="600"/>
+
+
+<!-- ![project-id-1](https://github.com/Akshay94/telcom2310-star/assets/8385908/130fc6a3-2f84-4a0a-9051-9c9bc5f1253b)-->
+<!-- ![project-id-2](https://github.com/Akshay94/telcom2310-star/assets/8385908/ded67914-eaf2-4d6c-bd67-bf010456d770)-->
 
 
 **Note:** The final cell "﻿﻿Create a Downloadable Package that Deploys SSH Tunnels" is not needed. You can skip that cell. If you do run it, you will likely get an error `cp: cannot stat ‘fabric_ssh_tunnel_tools.zip’: No such file or directory`. You may safely ignore this error; your environment is already set up.
