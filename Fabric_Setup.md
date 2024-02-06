@@ -63,9 +63,9 @@ folder.
 3\. Click the \"Configure Environment\" link in the notebook (under
 \"Setup Environment\")
 
-4\. Create a directory called `fabric_config` using the command `mkdir ~/work/fabric_config` and upload the public and private bastion and fabric_sliver keys you just downloaded to the fabric_config folder. You can drag-and-drop or use the upload button on left side.
+4\. Open a new Terminal using File > New > Terminal. Create a directory called `fabric_config` using the command `mkdir ~/work/fabric_config` and upload the public and private bastion and fabric_sliver keys you just downloaded to the fabric_config folder. You can drag-and-drop or use the upload button on left side.
 
-5\. Change the permissions of the key files in this terminal if not done on your computer before. Open a new Terminal using File > New > Terminal, navigate to fabric_config folder `cd ~/work/fabric_config`, and change the permission of private keys here - `chmod 0600 ~/work/fabric_config/bastion_key` and `chmod 0600 ~/work/fabric_config/fabric_sliver_key`
+5\. Change the permissions of the key files in this terminal if not done on your local computer before. Open a new Terminal using File > New > Terminal, navigate to fabric_config folder `cd ~/work/fabric_config`, and change the permission of private keys here - `chmod 0600 ~/work/fabric_config/bastion_key` and `chmod 0600 ~/work/fabric_config/fabric_sliver_key`
 
 6\. Follow the instructions in the notebook, editing the specified variables and running each cell to set up your environment. Important variables to edit are - 
 
