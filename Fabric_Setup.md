@@ -71,13 +71,12 @@ folder.
 
 7\. Follow the instructions in the notebook, edit the specified variables and run each cell to set up your environment. Important variables to edit are - 
 
-FABRIC_BASTION_USERNAME (use the screenshot below to find)
-FABRIC_PROJECT_ID (use the screenshot below to find)
-FABRIC_BASTION_PRIVATE_KEY_LOCATION=${HOME}/work/fabric_config/bastion_key
-FABRIC_BASTION_SSH_CONFIG_FILE=${HOME}'/work/fabric_config/ssh_config'
-FABRIC_RC_FILE=${HOME}'/work/fabric_config/fabric_rc'
+FABRIC_BASTION_USERNAME (use the screenshot below to find)\
+FABRIC_PROJECT_ID (use the screenshot below to find)\
+FABRIC_BASTION_PRIVATE_KEY_LOCATION=${HOME}/work/fabric_config/bastion_key\
+FABRIC_BASTION_SSH_CONFIG_FILE=${HOME}'/work/fabric_config/ssh_config'\
+FABRIC_RC_FILE=${HOME}'/work/fabric_config/fabric_rc'\
 FABRIC_SLICE_PRIVATE_KEY_FILE=${HOME}/work/fabric_config/slice_key
-FABRIC_SLICE_PUBLIC_KEY_FILE=${FABRIC_SLICE_PRIVATE_KEY_FILE}.pub
 
 ### To find Your Username (FABRIC_BASTION_USERNAME) (Do not use the one in the image)
 <img src="https://github.com/Akshay94/telcom2310-star/assets/8385908/ca982216-3c6f-4e69-a2e1-d7f944192041" alt="drawing" width="600"/>
