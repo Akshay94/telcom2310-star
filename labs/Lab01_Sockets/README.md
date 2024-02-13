@@ -7,7 +7,7 @@ In this lab, you will:
 - Review and understand the code for simple client-server applications using TCP and UDP
 - Run client-server applications over a wide-area network using the Fabric testbed
 - Examine performance characteristics using an application-level “Ping” test program
-- Bonus: modify TCP “Ping” program to compare non-persistent vs persistent connections
+<!--- Bonus: modify TCP “Ping” program to compare non-persistent vs persistent connections--->
 
 ## Prerequisites
 
@@ -26,16 +26,17 @@ You must have your Fabric account and JupyterHub environment setup. Please see t
    - Delete the old tutorials and Download the latest copy from GitHub
     	- Open a terminal in JupyterHub by clicking the "Terminal" tile under "Other" in the Launcher tab
         - Delete the old copy of tutorials using command
-          ```
+            ```
             rm -rf telcom2310
             rm -rf telcom2310-star
-          ```
+            ```
     	- In the terminal window, type the following command to download (pull) the latest version of the set of tutorials from Github:
             ```
             git clone https://github.com/Akshay94/telcom2310-star.git
             ```
 
    - Run the lab notebooks
-    	- In the left-hand column of JupyterHub, navigate to the Lab01_Sockets lab
-    	- Open and execute the CreateSlice.ipynb notebook
-        - Then open and execute the SocketLab.ipynb, filling out your Lab1.docx worksheet as you go.
+    	- In the left-hand column of JupyterHub, navigate to the folder `telcom2310-star > Lab01_Sockets`
+    	- Open and Execute the CreateSlice.ipynb notebook
+        - Open and Execute the SocketLab.ipynb
+        - Download and fill out your Lab1.docx worksheet as you go.
