@@ -27,6 +27,7 @@ You must have your Fabric account and JupyterHub environment setup. Please see t
     	- Open a terminal in JupyterHub by clicking the "Terminal" tile under "Other" in the Launcher tab
         - Delete the old copy of tutorials using command
             ```
+            cd ~/work
             rm -rf telcom2310
             rm -rf telcom2310-star
             ```
@@ -36,7 +37,12 @@ You must have your Fabric account and JupyterHub environment setup. Please see t
             ```
 
    - Run the lab notebooks
-    	- In the left-hand column of JupyterHub, navigate to the folder `telcom2310-star > Lab01_Sockets`
-    	- Open and Execute the CreateSlice.ipynb notebook
-        - Open and Execute the SocketLab.ipynb
-        - Download and fill out your Lab1.docx worksheet as you go.
+    	- In the left-hand column of JupyterHub, **navigate to the folder `telcom2310-star > Lab01_Sockets`**
+    	- **Open and Execute the CreateSlice.ipynb** notebook (Just click `Run All Cells` option in menu bar)
+        - If CreateSlice.ipynb does not work and gives error, **please execute the following code**, **reopen JupyterHub**, and do the previous step again:
+          ```
+          mv ~/work/fabric_config/requirements.txt ~/work/fabric_config/backup.requirements.txt
+          touch ~/work/fabric_config/requirements.txt
+          ```
+        - Open and Execute the **SocketLab.ipynb**
+        - Download and **fill out the Lab1.docx** worksheet as you go.
