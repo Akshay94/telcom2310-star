@@ -37,7 +37,7 @@ be named \"bastion_key\", and the corresponding public key will be named
 \"bastion_key.pub\". Be sure to save these somewhere on your computer
 that you will be able to find them again.
 
-7\. (**If you are using a Windows machine, you can skip this step, it will be covered in step 4-6 of next Section**)
+7\. (**If you are using a Windows machine, you can skip this step, it will be covered in step 1-3 of next Section**)
 
 Set the file permissions so that the private key is only readable by your user. You can do this with the command: `chmod 0600 <path-to-bastion-key>/bastion_key`. 
 For example if you saved it in a telcom2310 directory on your Desktop then the command will look like: `chmod 0600 ~/Desktop/telcom2310/bastion_key`
@@ -54,29 +54,26 @@ machines. To get to JupyterHub from the Fabric portal, you can click the
 See instructions here:
 [https://learn.fabric-testbed.net/knowledge-base/creating-your-first-experiment-in-jupyter-hub/](https://learn.fabric-testbed.net/knowledge-base/creating-your-first-experiment-in-jupyter-hub/) for more details.
 
-1\. In the file browser on the left side of the screen, you should see a
-list of folders. Double-click to open the \"jupyter-examples-rel1.5.3\"
+1\. Open a new Terminal using File > New > Terminal. Create a directory called `fabric_config` using the command `mkdir ~/work/fabric_config`. Do not panic if it gives you the error "Cannot create directory: File exists", just proceed forward. 
+
+2\. Upload the downloaded public and private bastion and fabric_sliver keys to this `fabric_config` folder. You can drag and drop or use the upload button on the left side.
+
+3\. Change the permissions of the key files in this terminal if not done on your local computer before. Go to the already open terminal (from Step 1), navigate to fabric_config folder `cd ~/work/fabric_config`, and change the permission of private keys here - `chmod 0600 ~/work/fabric_config/bastion_key` and `chmod 0600 ~/work/fabric_config/fabric_sliver_key`
+
+4\. In the file browser on the left side of the screen, you should see a
+list of folders. Double-click to open the \"jupyter-examples-rel1.5.5\"
 folder.
 
-2\. Double-click on \"start-here.ipynb\"
+5\. Double-click on \"start-here.ipynb\"
 
-3\. Click the \"Configure Environment\" link in the notebook (under
+6\. Click the \"Configure Environment\" link in the notebook (under
 \"Setup Environment\")
-
-4\. Open a new Terminal using File > New > Terminal. Create a directory called `fabric_config` using the command `mkdir ~/work/fabric_config`. Do not panic if it gives you the error "Cannot create directory: File exists", just proceed forward. 
-
-5\. Upload the downloaded public and private bastion and fabric_sliver keys to this `fabric_config` folder. You can drag and drop or use the upload button on the left side.
-
-6\. Change the permissions of the key files in this terminal if not done on your local computer before. Go to the already open terminal (from Step 4), navigate to fabric_config folder `cd ~/work/fabric_config`, and change the permission of private keys here - `chmod 0600 ~/work/fabric_config/bastion_key` and `chmod 0600 ~/work/fabric_config/fabric_sliver_key`
 
 7\. Follow the instructions in the notebook, edit the specified variables and run each cell to set up your environment. Important variables to edit are - 
 
 FABRIC_BASTION_USERNAME (use the screenshot below to find)\
 FABRIC_PROJECT_ID (use the screenshot below to find)\
-FABRIC_BASTION_PRIVATE_KEY_LOCATION=${HOME}/work/fabric_config/bastion_key\
-FABRIC_BASTION_SSH_CONFIG_FILE=${HOME}'/work/fabric_config/ssh_config'\
-FABRIC_RC_FILE=${HOME}'/work/fabric_config/fabric_rc'\
-FABRIC_SLICE_PRIVATE_KEY_FILE=${HOME}/work/fabric_config/slice_key
+FABRIC_BASTION_PRIVATE_KEY_LOCATION=${HOME}/work/fabric_config/bastion_key
 
 ### To find Your Username (FABRIC_BASTION_USERNAME) (Do not use the one in the image)
 <img src="https://github.com/Akshay94/telcom2310-star/assets/8385908/ca982216-3c6f-4e69-a2e1-d7f944192041" alt="drawing" width="600"/>
